@@ -7,7 +7,11 @@ module.exports = function (gfs) {
     const controller = require('./controller')(gfs);
     // Files routes
     router
-        .post('/', controller.upload.single('file'), controller.uploadFile)
+        .post
+            '/', 
+            controller.upload.single('file'), /* Is this multer's? */ 
+            controller.uploadFile
+        )
         .post('/url', controller.downloadFileFromUrl)
         .get('/:filename', controller.checkIfFileExist, controller.getFile)
         .get('/:filename/details', controller.checkIfFileExist, controller.getFileDetails)
