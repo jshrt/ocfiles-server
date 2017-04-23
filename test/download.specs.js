@@ -15,6 +15,7 @@ const options = {
     url: `http://localhost:${config.port}/api/v1/files`,
     formData: {
         file: {
+            // ?
             value: 'fs.createReadStream("/Users/macbookproretina13/Downloads/CV Karim Salih.pdf")',
             options: {
                 filename: path.join(config.root, './test/smile.png'),
